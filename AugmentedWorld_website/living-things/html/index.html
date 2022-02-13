@@ -40,9 +40,17 @@
   <div class="language">
     <div class="language_container">
       <input type="radio" id="lang-en" onClick="langSet('en')"></input>
-      <label for="lang-en">English</label>
+      <label for="lang-en">
+        English
+        <div class="lang-expand">
+
+        </div>
+      </label>
       <input type="radio" id="lang-ja" onClick="langSet('ja')" checked></input>
-      <label class="ja" for="lang-ja">日本語</label>
+      <label class="ja" for="lang-ja">
+        日本語
+        <div class="lang-expand"></div>
+      </label>
     </div>
   </div>
   <div class="cta">
@@ -678,7 +686,14 @@
       <div class="langCng" lang="en">Search by area</div>
       <div class="langCng" lang="ja">国と地域から探す</div>
     </div>
+    <div class="country-name-still phone_area">
+      <div class="langCng" lang="en">Country name</div>
+      <div class="langCng" lang="ja">国の名前</div>
+    </div>
     <div class="world-map_view">
+      <div class="country-name-movable_container">
+        <div class="country-name-movable"></div>
+      </div>
       <div class="world-map">
 
         <svg baseprofile="tiny" fill="rgb(51, 255, 0)" stroke="black" stroke-linecap="round" stroke-linejoin="round"
@@ -2170,9 +2185,7 @@
           <circle cx="1798.2" cy="719.3" id="2">
           </circle>
         </svg>
-        <div id="country-name_container">
-          <div id="country-name"></div>
-        </div>
+
       </div>
     </div>
   </div>

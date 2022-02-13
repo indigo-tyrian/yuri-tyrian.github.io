@@ -608,25 +608,36 @@ if (window.matchMedia("(min-width: 480px)").matches) {
 
 // cta Smart Phone mode
 let isTouching = false;
-let touchStartPos = sliderlist.clientX;
-let touchMovePos = 0;
+let touchStartPosX = sliderlist.clientX;
+let touchStartPosY = sliderlist.clientY;
+let touchMovePosX = 0;
 let touchEndPos = 0;
 let touchWhich = 0; 
 
 sliderlist.addEventListener('touchstart', (e) => {
   isTouching = true;
-  e.preventDefault();
-  touchStartPos = e.touches[0].pageX;
+  // e.preventDefault();
+  touchStartPosX = e.touches[0].pageX;
+  touchStartPosY = e.touches[0].pageY;
 }, { passive: false }
 );
 
 sliderlist.addEventListener('touchmove', (e) => {
   if (!isTouching)
     return;
+    touchMovePosX = e.touches[0].pageX;
+    touchMovePosY = e.touches[0].pageY;
+    touchRelateX = touchMovePosX - touchStartPosX;
+    touchRelateY = touchMovePosY - touchStartPosY;
+  sliderlist.style.transform = "translateX(" + (parseInt(touchRelateX) + parseInt(currentTransValue)) + "px)";
+
+  if (touchRelateX > 10 || touchRelateX < -10) {
     e.preventDefault();
-    touchMovePos = e.touches[0].pageX;
-    touchRelate = touchMovePos - touchStartPos;
-  sliderlist.style.transform = "translateX(" + (parseInt(touchRelate) + parseInt(currentTransValue)) + "px)";
+    
+  } else if(touchRelateY > 10 || touchRelateY < -10) {
+    isTouching = false;
+  }
+
 }, {passive: false});
 
 sliderlist.addEventListener(
@@ -638,9 +649,9 @@ sliderlist.addEventListener(
 
   
     sliderlist.style.transition = '0.3s';
-      sliderWidthHalf = (sliderlist.offsetWidth)/6/5;
+      sliderWidthHalf = (sliderlist.offsetWidth)/6/10;
       touchEndPos = e.changedTouches[0].pageX;
-      touchWhich = touchEndPos - touchStartPos;
+      touchWhich = touchEndPos - touchStartPosX;
       
       if (-sliderWidthHalf<= touchWhich && touchWhich<=sliderWidthHalf ) {
         // console.log('stay');
@@ -675,25 +686,34 @@ sliderlist.addEventListener(
 
 // Topic Smart Phone mode
 let isTouchingTopic = false;
-let touchStartPosTopic = sliderlistTopic.clientX;
-let touchMovePosTopic = 0;
+let touchStartPosXTopic = sliderlistTopic.clientX;
+let touchStartPosYTopic = sliderlistTopic.clientY;
+let touchMovePosXTopic = 0;
 let touchEndPosTopic = 0;
 let touchWhichTopic = 0; 
 
 sliderlistTopic.addEventListener('touchstart', (e) => {
   isTouchingTopic = true;
-  e.preventDefault();
-  touchStartPosTopic = e.touches[0].pageX;
-}, { passive: false }
+  // e.preventDefault();
+  touchStartPosXTopic = e.touches[0].pageX;
+  touchStartPosYTopic = e.touches[0].pageY;
+}, { passive: true }
 );
 
 sliderlistTopic.addEventListener('touchmove', (e) => {
   if (!isTouchingTopic)
     return;
+    
+    touchMovePosXTopic = e.touches[0].pageX;
+    touchMovePosYTopic = e.touches[0].pageY;
+    touchRelateXTopic = touchMovePosXTopic - touchStartPosXTopic;
+    touchRelateYTopic = touchMovePosYTopic - touchStartPosYTopic;
+  sliderlistTopic.style.transform = "translateX(" + (parseInt(touchRelateXTopic) + parseInt(currentTransValueTopic)) + "px)";
+  if (touchRelateXTopic > 10 || touchRelateXTopic < -10) {
     e.preventDefault();
-    touchMovePosTopic = e.touches[0].pageX;
-    touchRelateTopic = touchMovePosTopic - touchStartPosTopic;
-  sliderlistTopic.style.transform = "translateX(" + (parseInt(touchRelateTopic) + parseInt(currentTransValueTopic)) + "px)";
+  } else if(touchRelateYTopic > 10 || touchRelateYTopic < -10) {
+    isTouchingTopic = false;
+  }
 }, {passive: false});
 
 sliderlistTopic.addEventListener(
@@ -705,9 +725,9 @@ sliderlistTopic.addEventListener(
 
   
     sliderlistTopic.style.transition = '0.3s';
-      sliderWidthHalfTopic = (sliderlistTopic.offsetWidth)/6/5;
+      sliderWidthHalfTopic = (sliderlistTopic.offsetWidth)/6/10;
       touchEndPosTopic = e.changedTouches[0].pageX;
-      touchWhichTopic = touchEndPosTopic - touchStartPosTopic;
+      touchWhichTopic = touchEndPosTopic - touchStartPosXTopic;
       
       if (-sliderWidthHalfTopic<= touchWhichTopic && touchWhichTopic<=sliderWidthHalfTopic ) {
         transitionOnTopic();
@@ -731,7 +751,6 @@ sliderlistTopic.addEventListener(
         if (counterTopic == 0) {
           flipTopic(4)
         };
-        textAnimationNextTopic();
     };   
   });
 
@@ -741,17 +760,10 @@ sliderlistTopic.addEventListener(
 
 // LANGUAGE
 
-
-  window.onload = function() { 
-    // --- ブラウザのデフォルト言語を取得して初回の表示 ----- 
-    var wDef = (navigator.browserLanguage || navigator.language || navigator.userLanguage).substr(0,2);
-    langSet(wDef);
-   
-  }
    // =========================================================
    //      選択された言語のみ表示
    // =========================================================
-  function langSet(argLang){
+   function langSet(argLang){
    
     // --- 切り替え対象のclass一覧を取得 ----------------------
     var elm = document.getElementsByClassName("langCng");
@@ -766,6 +778,13 @@ sliderlistTopic.addEventListener(
         elm[i].style.display = 'none';
       }
     }
+}
+  
+  window.onload = function() { 
+    // --- ブラウザのデフォルト言語を取得して初回の表示 ----- 
+    var wDef = (navigator.browserLanguage || navigator.language || navigator.userLanguage).substr(0,2);
+    langSet(wDef);
+   
   }
 
 
@@ -776,9 +795,12 @@ sliderlistTopic.addEventListener(
 
 
 
+
   // svg
+  const map=document.querySelector('.world-map_view')
 let mapPath = document.getElementsByTagName('path');
-const stalker2 = document.getElementById('country-name_container');
+const countryNameMovable = document.querySelector('.country-name-movable_container');
+const countryNameStill = document.querySelector('.country-name-still');
 // console.log(ele[2].classList.value);
 // console.log(ele[0].getAttribute("name"));
 
@@ -792,7 +814,8 @@ const getCountryName = (mapMouseOver) => {
     countryName =mapMouseOver.getAttribute("name");
   }
   console.log(countryName);
-  document.getElementById('country-name').innerText=(countryName);
+  document.querySelector('.country-name-movable').innerText=(countryName);
+  countryNameStill.innerText=(countryName);
 }
 
 Array.from(mapPath).forEach(e => {
@@ -801,15 +824,17 @@ Array.from(mapPath).forEach(e => {
   ))
   e.addEventListener("touchstart", () => (
     getCountryName(e)
-    // stalker2.classList.add("center")
-
   ))
-
 })
 
  
 if (window.matchMedia("(min-width: 480px)").matches) {
-  document.addEventListener('mousemove', function (e) {
-    stalker2.style.transform = 'translate(' + (e.clientX) + 'px, ' + (e.clientY) + 'px)';
+  map.addEventListener('mousemove', function (e) {
+    countryNameMovable.style.transform = 'translate(' + e.clientX + 'px, ' + e.clientY + 'px)';
+    countryNameMovable.style.display = 'block';
+  });
+
+  map.addEventListener('mouseout', function (e) {
+    countryNameMovable.style.display = 'none';
   });
 }
