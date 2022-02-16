@@ -6,58 +6,64 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" minimal-scale=1 user-scalable=yes>
   <title>Document</title>
+  <link rel="stylesheet" href="../css/basic.css">
   <link rel="stylesheet" href="../css/styles.css">
+  <link rel="stylesheet" href="../css/header.css">
+  <link rel="stylesheet" href="../css/footer.css">
+  <link rel="stylesheet" href="../../css/basic2.css">
 </head>
 
 
 
 <body>
-  <nav class="nav_container">
-    <div class="nav_logo logo"> <a href="index.html">Augmented <br> World</a>
-    </div>
-    <div class="nav_text">
-      <div class="langCng" lang="en">Living Things</div>
-      <div class="langCng" lang="ja">生き物図鑑</div>
-    </div>
-    <div class="input-container pc_area">
-
-      <div id="search-btn">
-        <svg width="18px" height="18px" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
-
-          <path
-            d="M8,0.75 C12.1421356,0.75 15.5,4.10786438 15.5,8.25 C15.5,12.3921356 12.1421356,15.75 8,15.75 C3.85786438,15.75 0.5,12.3921356 0.5,8.25 C0.5,4.10786438 3.85786438,0.75 8,0.75 Z M8,2.75 C4.96243388,2.75 2.5,5.21243388 2.5,8.25 C2.5,11.2875661 4.96243388,13.75 8,13.75 C11.0375661,13.75 13.5,11.2875661 13.5,8.25 C13.5,5.21243388 11.0375661,2.75 8,2.75 Z"
-            id="Oval" fill-rule="nonzero"></path>
-          <path
-            d="M13.7045049,11.5795049 L14.7045049,11.5795049 C14.9806472,11.5795049 15.2045049,11.8033625 15.2045049,12.0795049 L15.2045049,17.0795049 C15.2045049,17.3556472 14.9806472,17.5795049 14.7045049,17.5795049 L13.7045049,17.5795049 C13.4283625,17.5795049 13.2045049,17.3556472 13.2045049,17.0795049 L13.2045049,12.0795049 C13.2045049,11.8033625 13.4283625,11.5795049 13.7045049,11.5795049 Z"
-            id="Rectangle"
-            transform="translate(14.204505, 14.579505) rotate(-45.000000) translate(-14.204505, -14.579505) ">
-          </path>
-        </svg>
+  <header>
+    <nav class="nav_container">
+      <div class="nav_logo logo"> <a href="index.html">Augmented <br> World</a>
       </div>
-      <input type="text">
-    </div>
-  </nav>
-  <div class="language">
-    <div class="language_container">
-      <input type="radio" id="lang-en" onClick="langSet('en')"></input>
-      <label for="lang-en">
-        English
-        <div class="lang-expand">
+      <div class="nav_text">
+        <div class="langCng" lang="en">Living Things</div>
+        <div class="langCng" lang="ja">生き物図鑑</div>
+      </div>
+      <div class="input-container pc_area">
 
+        <div id="search-btn">
+          <svg width="18px" height="18px" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
+
+            <path
+              d="M8,0.75 C12.1421356,0.75 15.5,4.10786438 15.5,8.25 C15.5,12.3921356 12.1421356,15.75 8,15.75 C3.85786438,15.75 0.5,12.3921356 0.5,8.25 C0.5,4.10786438 3.85786438,0.75 8,0.75 Z M8,2.75 C4.96243388,2.75 2.5,5.21243388 2.5,8.25 C2.5,11.2875661 4.96243388,13.75 8,13.75 C11.0375661,13.75 13.5,11.2875661 13.5,8.25 C13.5,5.21243388 11.0375661,2.75 8,2.75 Z"
+              id="Oval" fill-rule="nonzero"></path>
+            <path
+              d="M13.7045049,11.5795049 L14.7045049,11.5795049 C14.9806472,11.5795049 15.2045049,11.8033625 15.2045049,12.0795049 L15.2045049,17.0795049 C15.2045049,17.3556472 14.9806472,17.5795049 14.7045049,17.5795049 L13.7045049,17.5795049 C13.4283625,17.5795049 13.2045049,17.3556472 13.2045049,17.0795049 L13.2045049,12.0795049 C13.2045049,11.8033625 13.4283625,11.5795049 13.7045049,11.5795049 Z"
+              id="Rectangle"
+              transform="translate(14.204505, 14.579505) rotate(-45.000000) translate(-14.204505, -14.579505) ">
+            </path>
+          </svg>
         </div>
-      </label>
-      <input type="radio" id="lang-ja" onClick="langSet('ja')" checked></input>
-      <label class="ja" for="lang-ja">
-        日本語
-        <div class="lang-expand"></div>
-      </label>
+        <input type="text">
+      </div>
+    </nav>
+    <div class="language">
+      <div class="language_container">
+        <input type="radio" id="lang-en" onClick="langSet('en')"></input>
+        <label for="lang-en">
+          English
+          <div class="lang-expand">
+
+          </div>
+        </label>
+        <input type="radio" id="lang-ja" onClick="langSet('ja')" checked></input>
+        <label class="ja" for="lang-ja">
+          日本語
+          <div class="lang-expand"></div>
+        </label>
+      </div>
     </div>
-  </div>
+  </header>
   <div class="cta">
-    <div class="cta_title pc_area">
+    <div class="cta_title tab_area">
       <div class="langCng" lang="en">
-        Somewhere in the world,<br>They are ALIVE</div>
-      <div class="langCng" lang="ja">世界のどこかで<br>生きている</div>
+        Somewhere in<br>the world,<br>They are ALIVE</div>
+      <div class="langCng" lang="ja">世界の<br>どこかで<br>生きている</div>
     </div>
     <div class="cta_slider">
       <div class="slide">
@@ -151,7 +157,7 @@
     </div>
   </div>
 
-  <div class="topic">
+  <div class="topic small-item-font">
     <div class="topic_text big-text phone_area">
       <div class="langCng" lang="en">Hot Topic</div>
       <div class="langCng" lang="ja">おすすめ</div>
@@ -301,7 +307,7 @@
           </svg>
         </div>
       </div>
-      <div class="topic_video">
+      <div class="topic_video tab_area">
         <video autoplay loop muted>
           <source src="../videos/pexels-taryn-elliott-5220279.mp4" type="video/mp4">
         </video>
@@ -324,7 +330,7 @@
     </div>
   </div>
 
-  <div class="kind">
+  <div class="kind small-item-font">
 
     <div class="big-text pc_area">
       <div class="langCng" lang="en">Search by species</div>
@@ -339,10 +345,11 @@
 
       <div class="kind_container">
         <div class="box">
-          <div class="kind-overlay"></div>
-          <video class="video" muted>
+          <div class="kind-overlay pc_area"></div>
+          <video class="video pc_area" muted>
             <source src="../videos/mammal.mp4" type="video/mp4">
           </video>
+          <img class="phone_area" src="../img/spacies_mammal_img.jpg" alt="">
           <div class="text">
             <div class="langCng" lang="en">mammal</div>
             <div class="langCng" lang="ja">哺乳類</div>
@@ -352,34 +359,33 @@
         </div>
 
         <div class="box">
-          <div class="kind-overlay"></div>
-          <video class="video" muted>
+          <div class="kind-overlay pc_area"></div>
+          <video class="video pc_area" muted>
             <source src="../videos/bird.mp4" type="video/mp4">
           </video>
+          <img class="phone_area" src="../img/spacies_bird_img.jpg" alt="">
           <div class="text">
             <div class="langCng" lang="en">bird</div>
             <div class="langCng" lang="ja">鳥類</div>
-
           </div>
         </div>
 
         <div class="box">
-          <div class="kind-overlay"></div>
-          <video class="video" muted>
+          <div class="kind-overlay pc_area"></div>
+          <video class="video pc_area" muted>
             <source src="../videos/amphibian.mp4" type="video/mp4">
-          </video>
+          </video><img class="phone_area" src="../img/spacies_amphibian_img.jpg" alt="">
           <div class="text">
-
             <div class="langCng" lang="en">amphibian</div>
             <div class="langCng" lang="ja">両生類</div>
           </div>
         </div>
 
         <div class="box">
-          <div class="kind-overlay"></div>
-          <video class="video" muted>
+          <div class="kind-overlay pc_area"></div>
+          <video class="video pc_area" muted>
             <source src="../videos/reptile-2.mp4" type="video/mp4">
-          </video>
+          </video><img class="phone_area" src="../img/spacies_reptile_img.jpg" alt="">
           <div class="text">
             <div class="langCng" lang="en">reptile</div>
             <div class="langCng" lang="ja">爬虫類</div>
@@ -388,10 +394,10 @@
         </div>
 
         <div class="box">
-          <div class="kind-overlay"></div>
-          <video class="video" muted>
+          <div class="kind-overlay pc_area"></div>
+          <video class="video pc_area" muted>
             <source src="../videos/fish.mp4" type="video/mp4">
-          </video>
+          </video><img class="phone_area" src="../img/spacies_fish_img.jpg" alt="">
           <div class="text">
             <div class="langCng" lang="en">fish</div>
             <div class="langCng" lang="ja">魚類</div>
@@ -399,10 +405,11 @@
         </div>
 
         <div class="box">
-          <div class="kind-overlay"></div>
-          <video class="video" muted>
+          <div class="kind-overlay pc_area"></div>
+          <video class="video pc_area" muted>
             <source src="../videos/mollsca.mp4" type="video/mp4">
           </video>
+          <img class="phone_area" src="../img/spacies_mollusca_img.jpg" alt="">
           <div class="text">
             <div class="langCng" lang="en">mollusca</div>
             <div class="langCng" lang="ja">軟体動物</div>
@@ -410,10 +417,11 @@
         </div>
 
         <div class="box">
-          <div class="kind-overlay"></div>
-          <video class="video" muted>
+          <div class="kind-overlay pc_area"></div>
+          <video class="video pc_area" muted>
             <source src="../videos/crustacian.mp4" type="video/mp4">
           </video>
+          <img class="phone_area" src="../img/spacies_crustacean_img.jpg" alt="">
           <div class="text">
             <div class="langCng" lang="en">crustacian</div>
             <div class="langCng" lang="ja">節足動物</div>
@@ -421,10 +429,11 @@
         </div>
 
         <div class="box">
-          <div class="kind-overlay"></div>
-          <video class="video" muted>
+          <div class="kind-overlay pc_area"></div>
+          <video class="video pc_area" muted>
             <source src="../videos/insect.mp4" type="video/mp4">
           </video>
+          <img class="phone_area" src="../img/spacies_insect_img.jpg" alt="">
           <div class="text">
 
             <div class="langCng" lang="en">insect</div>
@@ -435,7 +444,7 @@
     </div>
   </div>
 
-  <div class="habitat">
+  <div class="habitat small-item-font">
     <div class="habitat-text big-text phone_area">
       <div class="langCng" lang="en">Search by Habitat</div>
       <div class="langCng" lang="ja">生息地から探す</div>
@@ -677,7 +686,7 @@
       </div>
     </div>
   </div>
-  <div class="region">
+  <div class="country small-item-font">
     <div class="big-text pc_area">
       <div class="langCng" lang="en">Search by area</div>
       <div class="langCng" lang="ja">国と地域から探す</div>
@@ -2190,7 +2199,6 @@
     </div>
   </div>
 
-
   <footer>
     <div class="footer_logo logo"> <a href="index.html">Augmented <br> World</a></div>
     <div class="container">
@@ -2223,7 +2231,7 @@
 
 
 
-  <nav class="bottom-nav" class="phone_area">
+  <nav class="bottom-nav phone_area">
     <div class="container">
       <div class="icon" id="home">
         <svg width="100%" height="100%" viewBox="0 0 100 100" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -2307,10 +2315,9 @@
       </div>
     </div>
   </nav>
-
-
 </body>
 
+<script src="../js/change-language.js"></script>
 <script src="../js/app.js"></script>
 
 </html>

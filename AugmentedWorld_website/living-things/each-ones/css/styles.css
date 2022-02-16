@@ -1,0 +1,147 @@
+.big-img{
+  width: 100%;
+margin: 0 2vw 0 2vw;
+}
+
+.big-img img{
+  object-fit: cover;
+  width: 60%;
+  height: 60%;
+  display: flex;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.lt-name{
+  color: white;
+  font-size: 5vw;
+  font-weight: 900;
+display: flex;
+justify-content: center;
+text-align: center;
+margin: 0;
+}
+
+
+.line{
+  width: 80%;
+  height: 4vw;
+  margin:  0 auto 3vw;
+  border-bottom: solid 3px white;
+  display: flex;
+}
+
+.classification{
+
+}
+.overlay{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+}
+
+.classification-container{
+  /* display: none; */
+  height:0;
+  width: 50%;
+  position: relative;
+  /* background-color: grey; */
+  transition: 0.3s;
+  margin: 0 auto;
+  /* opacity: 0; */
+  overflow: hidden;
+}
+
+.classification-item{
+  position: absolute;
+  color: white;
+  height:2vw;
+  transition: 0.3s;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1vw;
+  font-size: 2vw;
+  background-color: rgba(50,50,72,1); 
+}
+.c1{
+  width:20vw;
+  text-align: center;
+}
+
+.c2{
+  width: 20vw;
+  color: blue;
+  text-align: center;
+
+}
+
+.classification-item:nth-child(1){
+top:(calc(100%/7*0));
+z-index: 12;
+}
+.classification-item:nth-child(2){
+top:calc(100%/7*1);
+/* margin-top:10px; */
+z-index: 11;
+
+}
+.classification-item:nth-child(3){
+top:calc(100%/7*2);
+/* margin-top:20px; */
+
+z-index: 10;
+
+}
+.classification-item:nth-child(4){
+top:calc(100%/7*3);
+/* margin-top:30px; */
+
+z-index: 9;
+
+}
+.classification-item:nth-child(5){
+top:calc(100%/7*4);
+  /* margin-top:40px; */
+  z-index: 8;
+}
+.classification-item:nth-child(6){
+top:calc(100%/7*5);
+
+  /* margin-top:50px; */
+  z-index: 7;
+}
+.classification-item:nth-child(7){
+top:calc(100%/7*6);
+
+  /* margin-top:60px; */
+  z-index: 6;
+}
+.classification-item:nth-child(8){
+top:calc(100%/7*7);
+
+  /* margin-top:70px; */
+  z-index: 5;
+}
+
+.scroll-up{
+  color: white;
+  margin: 4vw 4vw 4vw 4vw;
+}
+
+.features{
+  margin: 2vw 2vw 0 2vw;
+  display: flex;
+  justify-content: center;
+}
+.features-container{
+  width: 80%;
+}
+
+
+.features-item{
+  color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8vw;
+}
