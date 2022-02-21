@@ -6,25 +6,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0" minimal-scale=1 user-scalable=yes>
   <title>Document</title>
-  <link rel="stylesheet" href="../css/basic.css">
   <link rel="stylesheet" href="../css/styles.css">
-  <link rel="stylesheet" href="../css/header.css">
-  <link rel="stylesheet" href="../css/footer.css">
-  <link rel="stylesheet" href="../../css/basic2.css">
 </head>
 
 
 
 <body>
   <header>
-    <nav class="nav_container">
+    <nav class="header__nav">
       <div class="nav_logo logo"> <a href="index.html">Augmented <br> World</a>
       </div>
-      <div class="nav_text">
+      <div class="nav__text">
         <div class="langCng" lang="en">Living Things</div>
         <div class="langCng" lang="ja">生き物図鑑</div>
       </div>
-      <div class="input-container pc_area">
+      <div class="search__container pc_area">
 
         <div id="search-btn">
           <svg width="18px" height="18px" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg">
@@ -39,16 +35,15 @@
             </path>
           </svg>
         </div>
-        <input type="text">
+        <input class="search__box" type="text">
       </div>
     </nav>
     <div class="language">
-      <div class="language_container">
+      <div class="language__container">
         <input type="radio" id="lang-en" onClick="langSet('en')"></input>
         <label for="lang-en">
           English
           <div class="lang-expand">
-
           </div>
         </label>
         <input type="radio" id="lang-ja" onClick="langSet('ja')" checked></input>
@@ -171,110 +166,108 @@
         <div class="slider">
           <div class="slide">
             <img src="../img/olix.jpg" alt="">
-            <div class="img-gradient">
-              <div class="description_container">
-                <span class="description_title">
-                  <div class="langCng" lang="en">Oryx</div>
-                  <div class="langCng" lang="ja">オリックス</div>
-                </span>
-                <div class="description_text">
-                  <div class="langCng" lang="en">Oryx is a genus consisting of four large antelope species called
-                    oryxes.
-                    Their pelage is pale with contrasting dark markings in the face and on the legs, and their long
-                    horns
-                    are almost straight.</div>
-                  <div class="langCng" lang="ja">オリックスは、鹿の仲間です。毛皮は青白く、顔と足には黒い模様が入っています。まっすぐな長い角を持っています。</div>
-                </div>
+            <div class="overlay__gradient"></div>
+            <div class="description_container">
+              <span class="description_title">
+                <div class="langCng" lang="en">Oryx</div>
+                <div class="langCng" lang="ja">オリックス</div>
+              </span>
+              <div class="description_text">
+                <div class="langCng" lang="en">Oryx is a genus consisting of four large antelope species called
+                  oryxes.
+                  Their pelage is pale with contrasting dark markings in the face and on the legs, and their long
+                  horns
+                  are almost straight.</div>
+                <div class="langCng" lang="ja">オリックスは、鹿の仲間です。毛皮は青白く、顔と足には黒い模様が入っています。まっすぐな長い角を持っています。</div>
               </div>
             </div>
           </div>
 
+
           <div class="slide">
             <img src="../img/elephant.jpg" alt="">
-            <div class="img-gradient">
-              <div class="description_container">
-                <span class="description_title">
-                  <div class="langCng" lang="en">African Elephant</div>
-                  <div class="langCng" lang="ja">アフリカゾウ</div>
-                </span>
-                <div class="description_text">
-                  <div class="langCng" lang="en">African elephants are the largest land animals on Earth.</div>
-                  <div class="langCng" lang="ja">アフリカゾウは、地上の動物の中で、もっとも大きい動物です。</div>
-                </div>
+            <div class="overlay__gradient"></div>
+            <div class="description_container">
+              <span class="description_title">
+                <div class="langCng" lang="en">African Elephant</div>
+                <div class="langCng" lang="ja">アフリカゾウ</div>
+              </span>
+              <div class="description_text">
+                <div class="langCng" lang="en">African elephants are the largest land animals on Earth.</div>
+                <div class="langCng" lang="ja">アフリカゾウは、地上の動物の中で、もっとも大きい動物です。</div>
               </div>
             </div>
           </div>
+
 
           <div class="slide">
             <img src="../img/squirrel-1-5728047_1920.jpg" alt="">
-            <div class="img-gradient">
-              <div class="description_container">
-                <span class="description_title">
-                  <div class="langCng" lang="en">Squirrels</div>
-                  <div class="langCng" lang="ja">リス</div>
+            <div class="overlay__gradient"></div>
+            <div class="description_container">
+              <span class="description_title">
+                <div class="langCng" lang="en">Squirrels</div>
+                <div class="langCng" lang="ja">リス</div>
 
-                </span>
-                <div class="description_text">
-                  <div class="langCng" lang="en">Squirrels are members of the family Sciuridae, a family that includes
-                    small or medium-size rodents. The squirrel family includes tree squirrels, ground squirrels, and
-                    flying
-                    squirrels.</div>
-                  <div class="langCng" lang="ja">リスは、げっ歯類の仲間です。他のげっ歯類は、カピバラ、ムササビ等がいます。</div>
-                </div>
+              </span>
+              <div class="description_text">
+                <div class="langCng" lang="en">Squirrels are members of the family Sciuridae, a family that includes
+                  small or medium-size rodents. The squirrel family includes tree squirrels, ground squirrels, and
+                  flying
+                  squirrels.</div>
+                <div class="langCng" lang="ja">リスは、げっ歯類の仲間です。他のげっ歯類は、カピバラ、ムササビ等がいます。</div>
               </div>
             </div>
           </div>
+
 
           <div class="slide">
             <img src="../img/tiger-1.jpg" alt="">
-            <div class="img-gradient">
-              <div class="description_container">
-                <span class="description_title">
-                  <div class="langCng" lang="en">Tiger</div>
-                  <div class="langCng" lang="ja">トラ</div>
+            <div class="overlay__gradient"></div>
+            <div class="description_container">
+              <span class="description_title">
+                <div class="langCng" lang="en">Tiger</div>
+                <div class="langCng" lang="ja">トラ</div>
 
-                </span>
-                <div class="description_text">
-                  <div class="langCng" lang="en">tiger is the largest wild cat in the world. Its coat is reddish-orange
-                    with dark stripes</div>
-                  <div class="langCng" lang="ja">トラは、ネコ科の中で最も大きい動物です。</div>
-                </div>
+              </span>
+              <div class="description_text">
+                <div class="langCng" lang="en">tiger is the largest wild cat in the world. Its coat is reddish-orange
+                  with dark stripes</div>
+                <div class="langCng" lang="ja">トラは、ネコ科の中で最も大きい動物です。</div>
               </div>
             </div>
           </div>
 
+
           <div class="slide">
             <img src="../img/olix.jpg" alt="">
-            <div class="img-gradient">
-              <div class="description_container">
-                <span class="description_title">
-                  <div class="langCng" lang="en">Oryx</div>
-                  <div class="langCng" lang="ja">オリックス</div>
-                </span>
-                <div class="description_text">
-                  <div class="langCng" lang="en">Oryx is a genus consisting of four large antelope species called
-                    oryxes.
-                    Their pelage is pale with contrasting dark markings in the face and on the legs, and their long
-                    horns
-                    are almost straight.</div>
-                  <div class="langCng" lang="ja">オリックスは、鹿の仲間です。毛皮は青白く、顔と足には黒い模様が入っています。まっすぐな長い角を持っています。</div>
-                </div>
+            <div class="overlay__gradient"></div>
+            <div class="description_container">
+              <span class="description_title">
+                <div class="langCng" lang="en">Oryx</div>
+                <div class="langCng" lang="ja">オリックス</div>
+              </span>
+              <div class="description_text">
+                <div class="langCng" lang="en">Oryx is a genus consisting of four large antelope species called
+                  oryxes.
+                  Their pelage is pale with contrasting dark markings in the face and on the legs, and their long
+                  horns
+                  are almost straight.</div>
+                <div class="langCng" lang="ja">オリックスは、鹿の仲間です。毛皮は青白く、顔と足には黒い模様が入っています。まっすぐな長い角を持っています。</div>
               </div>
             </div>
           </div>
 
           <div class="slide">
             <img src="../img/elephant.jpg" alt="">
-            <div class="img-gradient">
-              <div class="description_container">
-                <span class="description_title">
-                  <div class="langCng" lang="en">African Elephant</div>
-                  <div class="langCng" lang="ja">アフリカゾウ</div>
-                </span>
-                <div class="description_text">
-                  <div class="langCng" lang="en">African elephants are the largest land animals on Earth.</div>
-                  <div class="langCng" lang="ja">アフリカゾウは、地上の動物の中で、もっとも大きい動物です。</div>
-                </div>
+            <div class="overlay__gradient"></div>
+            <div class="description_container">
+              <span class="description_title">
+                <div class="langCng" lang="en">African Elephant</div>
+                <div class="langCng" lang="ja">アフリカゾウ</div>
+              </span>
+              <div class="description_text">
+                <div class="langCng" lang="en">African elephants are the largest land animals on Earth.</div>
+                <div class="langCng" lang="ja">アフリカゾウは、地上の動物の中で、もっとも大きい動物です。</div>
               </div>
             </div>
           </div>
@@ -311,10 +304,10 @@
         <video autoplay loop muted>
           <source src="../videos/pexels-taryn-elliott-5220279.mp4" type="video/mp4">
         </video>
-        <div class="img-gradient"></div>
+        <div class="overlay__gradient"></div>
         <div class="description_container">
           <span class="description_title">
-            <div class="langCng" lang="en">Giraffe</div>
+            <div class="langCng" lang="en">Girffe</div>
             <div class="langCng" lang="ja">キリン</div>
           </span>
           <div class="description_text">
@@ -324,11 +317,12 @@
             <div class="langCng" lang="ja">キリンは、地球上で一番背の高い動物です。</div>
           </div>
         </div>
-
       </div>
-
     </div>
+
   </div>
+  </div>
+  <div id="like_button_container"></div>
 
   <div class="kind small-item-font">
 
@@ -341,103 +335,147 @@
       <div class="langCng" lang="ja">種族から探す</div>
     </div>
 
-    <div class="kind_view">
+    <div class="kind_view phone-scroll">
 
       <div class="kind_container">
         <div class="box">
-          <div class="kind-overlay pc_area"></div>
-          <video class="video pc_area" muted>
+          <div class="kind-overlay tab_area"></div>
+          <video class="video tab_area" muted>
             <source src="../videos/mammal.mp4" type="video/mp4">
           </video>
-          <img class="phone_area" src="../img/spacies_mammal_img.jpg" alt="">
-          <div class="text">
-            <div class="langCng" lang="en">mammal</div>
-            <div class="langCng" lang="ja">哺乳類</div>
-
-
+          <img class="phone_only_area" src="../img/spacies_mammal_img.jpg" alt="">
+          <div class="text-block">
+            <div class="text">
+              <div class="langCng" lang="en">mammal</div>
+              <div class="langCng" lang="ja">哺乳類</div>
+            </div>
+            <span class="total-number">
+              <div class="langCng" lang="en">114 Species</div>
+              <div class="langCng" lang="ja">114種類</div>
+            </span>
           </div>
         </div>
 
         <div class="box">
-          <div class="kind-overlay pc_area"></div>
-          <video class="video pc_area" muted>
+          <div class="kind-overlay tab_area"></div>
+          <video class="video tab_area" muted>
             <source src="../videos/bird.mp4" type="video/mp4">
           </video>
-          <img class="phone_area" src="../img/spacies_bird_img.jpg" alt="">
-          <div class="text">
-            <div class="langCng" lang="en">bird</div>
-            <div class="langCng" lang="ja">鳥類</div>
+          <img class="phone_only_area" src="../img/spacies_bird_img.jpg" alt="">
+          <div class="text-block">
+            <div class="text">
+              <div class="langCng" lang="en">bird</div>
+              <div class="langCng" lang="ja">鳥類</div>
+            </div>
+            <span class="total-number">
+              <div class="langCng" lang="en">114 Species</div>
+              <div class="langCng" lang="ja">114種類</div>
+            </span>
           </div>
         </div>
 
         <div class="box">
-          <div class="kind-overlay pc_area"></div>
-          <video class="video pc_area" muted>
+          <div class="kind-overlay tab_area"></div>
+          <video class="video tab_area" muted>
             <source src="../videos/amphibian.mp4" type="video/mp4">
-          </video><img class="phone_area" src="../img/spacies_amphibian_img.jpg" alt="">
-          <div class="text">
-            <div class="langCng" lang="en">amphibian</div>
-            <div class="langCng" lang="ja">両生類</div>
+          </video><img class="phone_only_area" src="../img/spacies_amphibian_img.jpg" alt="">
+          <div class="text-block">
+            <div class="text">
+              <div class="langCng" lang="en">amphibian</div>
+              <div class="langCng" lang="ja">両生類</div>
+            </div>
+            <span class="total-number">
+              <div class="langCng" lang="en">114 Species</div>
+              <div class="langCng" lang="ja">114種類</div>
+            </span>
           </div>
         </div>
 
         <div class="box">
-          <div class="kind-overlay pc_area"></div>
-          <video class="video pc_area" muted>
+          <div class="kind-overlay tab_area"></div>
+          <video class="video tab_area" muted>
             <source src="../videos/reptile-2.mp4" type="video/mp4">
-          </video><img class="phone_area" src="../img/spacies_reptile_img.jpg" alt="">
-          <div class="text">
-            <div class="langCng" lang="en">reptile</div>
-            <div class="langCng" lang="ja">爬虫類</div>
-
+          </video><img class="phone_only_area" src="../img/spacies_reptile_img.jpg" alt="">
+          <div class="text-block">
+            <div class="text">
+              <div class="langCng" lang="en">reptile</div>
+              <div class="langCng" lang="ja">爬虫類</div>
+            </div>
+            <span class="total-number">
+              <div class="langCng" lang="en">114 Species</div>
+              <div class="langCng" lang="ja">114種類</div>
+            </span>
           </div>
         </div>
 
         <div class="box">
-          <div class="kind-overlay pc_area"></div>
-          <video class="video pc_area" muted>
+          <div class="kind-overlay tab_area"></div>
+          <video class="video tab_area" muted>
             <source src="../videos/fish.mp4" type="video/mp4">
-          </video><img class="phone_area" src="../img/spacies_fish_img.jpg" alt="">
-          <div class="text">
-            <div class="langCng" lang="en">fish</div>
-            <div class="langCng" lang="ja">魚類</div>
+          </video><img class="phone_only_area" src="../img/spacies_fish_img.jpg" alt="">
+          <div class="text-block">
+            <div class="text">
+              <div class="langCng" lang="en">fish</div>
+              <div class="langCng" lang="ja">魚類</div>
+            </div>
+            <span class="total-number">
+              <div class="langCng" lang="en">114 Species</div>
+              <div class="langCng" lang="ja">114種類</div>
+            </span>
           </div>
         </div>
 
         <div class="box">
-          <div class="kind-overlay pc_area"></div>
-          <video class="video pc_area" muted>
+          <div class="kind-overlay tab_area"></div>
+          <video class="video tab_area" muted>
             <source src="../videos/mollsca.mp4" type="video/mp4">
           </video>
-          <img class="phone_area" src="../img/spacies_mollusca_img.jpg" alt="">
-          <div class="text">
-            <div class="langCng" lang="en">mollusca</div>
-            <div class="langCng" lang="ja">軟体動物</div>
+          <img class="phone_only_area" src="../img/spacies_mollusca_img.jpg" alt="">
+          <div class="text-block">
+            <div class="text">
+              <div class="langCng" lang="en">mollusca</div>
+              <div class="langCng" lang="ja">軟体動物</div>
+            </div>
+            <span class="total-number">
+              <div class="langCng" lang="en">114 Species</div>
+              <div class="langCng" lang="ja">114種類</div>
+            </span>
           </div>
         </div>
 
         <div class="box">
-          <div class="kind-overlay pc_area"></div>
-          <video class="video pc_area" muted>
+          <div class="kind-overlay tab_area"></div>
+          <video class="video tab_area" muted>
             <source src="../videos/crustacian.mp4" type="video/mp4">
           </video>
-          <img class="phone_area" src="../img/spacies_crustacean_img.jpg" alt="">
-          <div class="text">
-            <div class="langCng" lang="en">crustacian</div>
-            <div class="langCng" lang="ja">節足動物</div>
+          <img class="phone_only_area" src="../img/spacies_crustacean_img.jpg" alt="">
+          <div class="text-block">
+            <div class="text">
+              <div class="langCng" lang="en">crustacian</div>
+              <div class="langCng" lang="ja">節足動物</div>
+            </div>
+            <span class="total-number">
+              <div class="langCng" lang="en">114 Species</div>
+              <div class="langCng" lang="ja">114種類</div>
+            </span>
           </div>
         </div>
 
         <div class="box">
-          <div class="kind-overlay pc_area"></div>
-          <video class="video pc_area" muted>
+          <div class="kind-overlay tab_area"></div>
+          <video class="video tab_area" muted>
             <source src="../videos/insect.mp4" type="video/mp4">
           </video>
-          <img class="phone_area" src="../img/spacies_insect_img.jpg" alt="">
-          <div class="text">
-
-            <div class="langCng" lang="en">insect</div>
-            <div class="langCng" lang="ja">昆虫</div>
+          <img class="phone_only_area" src="../img/spacies_insect_img.jpg" alt="">
+          <div class="text-block">
+            <div class="text">
+              <div class="langCng" lang="en">insect</div>
+              <div class="langCng" lang="ja">昆虫</div>
+            </div>
+            <span class="total-number">
+              <div class="langCng" lang="en">114 Species</div>
+              <div class="langCng" lang="ja">114種類</div>
+            </span>
           </div>
         </div>
       </div>
@@ -449,7 +487,7 @@
       <div class="langCng" lang="en">Search by Habitat</div>
       <div class="langCng" lang="ja">生息地から探す</div>
     </div>
-    <div class="habitat_view">
+    <div class="habitat_view phone-scroll">
       <div class="habitat_container">
         <div class="habitat-text big-text pc_area">
           <div class="langCng" lang="en">Search by Habitat</div>
@@ -671,7 +709,6 @@
             <div class="gradient"></div>
             <div class="text-block">
               <span class="text">
-
                 <div class="langCng" lang="en">Deep Sea</div>
                 <div class="langCng" lang="ja">深海</div>
               </span>
@@ -699,7 +736,7 @@
       <div class="langCng" lang="en">Country name</div>
       <div class="langCng" lang="ja">国の名前</div>
     </div>
-    <div class="world-map_view">
+    <div class="world-map_view phone-scroll">
       <div class="country-name-movable_container">
         <div class="country-name-movable"></div>
       </div>
@@ -2199,8 +2236,8 @@
     </div>
   </div>
 
-  <footer>
-    <div class="footer_logo logo"> <a href="index.html">Augmented <br> World</a></div>
+  <footer class="footer">
+    <div class="footer__logo logo"> <a href="index.html">Augmented <br> World</a></div>
     <div class="container">
       <button class="link" type="button">
 
@@ -2315,6 +2352,13 @@
       </div>
     </div>
   </nav>
+  <!-- Load React. -->
+  <!-- Note: when deploying, replace "development.js" with "production.min.js". -->
+  <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
+  <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+
+  <!-- Load our React component. -->
+  <script src="../js/demo.js"></script>
 </body>
 
 <script src="../js/change-language.js"></script>

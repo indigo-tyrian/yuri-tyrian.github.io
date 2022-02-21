@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAIE,AAAA,EAAE,CAAK;EACL,SAAS,EALA,IAAI;CAMd;;AAFD,AAAA,EAAE,CAAK;EACL,SAAS,EALM,IAAI;CAMpB;;AAFD,AAAA,EAAE,CAAK;EACL,SAAS,EALY,IAAI;CAM1B;;AAFD,AAAA,EAAE,CAAK;EACL,SAAS,EALkB,IAAI;CAMhC",
+    "sources": [
+        "stylesw.scss"
+    ],
+    "names": [],
+    "file": "stylesw.css"
+}

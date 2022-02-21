@@ -1,25 +1,30 @@
 /* LANGUAGE */
-.language{
+.language {
   display: flex;
   align-items: center;
   justify-content: center;
   /* margin: 0 200px; */
   z-index: 200;
 }
-
-.language_container input{
-  display: none ;
+.language__container {
+  font-size: 0.8rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6vw;
+  color: white;
 }
-.language_container label{
+.language__container input {
+  display: none;
+}
+.language__container label {
   padding-bottom: 4px;
   display: block;
   position: relative;
   z-index: 1000;
 }
-
-.lang-expand {
+.language__container label .lang-expand {
   display: block;
-  content: '';
+  content: "";
   position: absolute;
   width: 120%;
   height: 40px;
@@ -28,26 +33,14 @@
   border-radius: 25%;
   /* background: rgba(255, 0, 0, 0.2); */
   transform: translate(10%, 0);
-/* -webkit-transform: translate(-50%, -50%);
--ms-transform: translate(-50%, -50%); */
 }
-
-.language_container .ja{
+.language__container .ja {
   margin-top: -2px;
 }
- 
- /* === 各ラジオボタンのラベルをボタンに変更 == */
- .language_container{
-   font-size: 0.8rem;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 6vw;
-color: white;
-}
 
-.nav_container{
+.header__nav {
   display: grid;
-  grid-template-columns:1fr 2fr 1fr;
+  grid-template-columns: 1fr 2fr 1fr;
   width: 100%;
   max-width: 1920px;
   height: 70px;
@@ -56,106 +49,68 @@ color: white;
   align-items: center;
   justify-items: center;
 }
-
-/* .nav_container .nav_title{
-   position: relative;
-  width: 250px;
-  height: 70px;
-  display: grid;
-  grid-template-columns: 1fr;
-} */
-
-
-.nav_container .nav_text{
+@media (max-width: 799px) {
+  .header__nav {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media (max-width: 480px) {
+  .header__nav {
+    height: 40px;
+  }
+}
+.header__nav .nav__text {
   color: white;
   font-size: 3vw;
   font-weight: 900;
 }
-
-nav .input-container{
-position: relative;
-margin:auto auto;
+@media (max-width: 799px) {
+  .header__nav .nav__text {
+    font-size: 2rem;
+  }
 }
-
-#search-btn{
-  position: absolute;
-  right: 5%;
-  top: 20%;
-
+@media (max-width: 480px) {
+  .header__nav .nav__text {
+    font-size: 1.2rem;
+  }
 }
-
-.nav_container input {
-  height: 30px;
-  border-radius: 10px;
-  min-width: 199px;
-  width: 20vw;
-  background-color: rgba(255, 255, 255);
-  color: rgba(255, 255, 255, 0.6);
-  -webkit-appearance: none;
-  border:solid white 2px;
-  outline: none;
-}
-
-/* .nav_link{
-  display: grid;
-  grid-template-columns: repeat(2,1fr);
-  color: white;
-} */
-
-.nav_logo{
+.header__nav .logo {
   display: flex;
   justify-content: center;
   align-items: center;
   padding-right: 10vw;
 }
-
-
-.nav_logo a{
-  font-size: 1.6rem;  
-}
-
-.logo a{
-  background-image: linear-gradient(to left,  rgb(0, 255, 149), rgb(0, 174, 255) );
-  -webkit-background-clip: text;
-  -moz-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -moz-text-fill-color: transparent;
-  height: 80%;
-  display: block;
-  justify-content: center;
-  align-items: center;
-  z-index: 99;
-  font-weight: bold;
-}
-
-@media screen and (max-width: 800px){
-/* 800px */
-.nav_container{
-  grid-template-columns: 1fr 1fr;
-}
-/* 800px */
-.nav_container .nav_text{
-  font-size: 2rem;
-}
-/* 800px */
-.nav_container .logo{
-  padding-right: 20vw;
-}
-}
-
-@media screen and (max-width: 480px){
-
-  /* 480px */
-  .nav_logo a{
-    font-size: 1rem;  
+@media (max-width: 799px) {
+  .header__nav .logo {
+    padding-right: 20vw;
   }
-
-  /* 480px */
-  .nav_container{
-    height: 40px;
+}
+.header__nav .logo a {
+  font-size: 1.6rem;
+}
+@media (max-width: 480px) {
+  .header__nav .logo a {
+    font-size: 1rem;
   }
-  /* 480px */
-  .nav_container .nav_text{
-    font-size: 1.2rem;
-  }
-  }
+}
+.header__nav .search__container {
+  position: relative;
+  margin: auto auto;
+}
+.header__nav .search__container input.search__box {
+  height: 30px;
+  border-radius: 10px;
+  min-width: 199px;
+  width: 20vw;
+  background-color: white;
+  color: rgba(255, 255, 255, 0.6);
+  -webkit-appearance: none;
+  border: solid white 2px;
+  outline: none;
+}
+.header__nav .search__container #search-btn {
+  position: absolute;
+  right: 5%;
+  top: 20%;
+}
+/*# sourceMappingURL=header.css.map */

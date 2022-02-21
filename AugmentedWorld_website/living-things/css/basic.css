@@ -1,50 +1,90 @@
+@charset "UTF-8";
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Kumbh Sans', sans-serif;
-  background-color: rgba(50,50,72,1); 
+  font-family: "Kumbh Sans", sans-serif;
+  background-color: #323248;
   overflow-x: hidden;
 }
 
 :root {
   --cta-slide-height: 45vw;
   --topic-slide-height: 40vw;
-  --small-item-font: Montserrat,sans-serif;
-  --font:Rubik, sans-serif;
+  --small-item-font: Montserrat, sans-serif;
+  --font: Rubik, sans-serif;
 }
 
-.small-item-font{
+.small-item-font {
   font-family: var(--small-item-font);
 }
 
-html{
+html {
   margin: 0;
   padding: 0;
   scroll-behavior: smooth;
   list-style: none;
   overflow-x: hidden;
 }
-div{
--webkit-user-select: none;
-	   -moz-user-select: none;
-	    -ms-user-select: none;
-	        user-select: none;
-        }
 
-a{
-text-decoration: none;
-color: inherit;
+div {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
-li{
-list-style: none;
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style: none;
 }
 
 video {
   /* iPhone safariの枠線を消す */
-  filter: drop-shadow(0px 0px rgba(0,0,0,0));
-
+  filter: drop-shadow(0px 0px rgba(0, 0, 0, 0));
   /* PCのChromeの枠線を消す */
   outline: none;
   border: none;
 }
+
+.scroll {
+  overflow: hidden;
+  overflow-x: scroll;
+  /* -webkit-overflow-scrolling: ; */
+  white-space: nowrap;
+  -ms-overflow-style: none;
+}
+
+/* .scroll::-webkit-scrollbar {
+  display:none;
+} */
+@media screen and (max-width: 480px) {
+  .phone-scroll {
+    overflow: hidden;
+    overflow-x: scroll;
+    -webkit-overflow-scrolling: touch;
+    white-space: nowrap;
+    -ms-overflow-style: none;
+  }
+
+  .phone-scroll::-webkit-scrollbar {
+    display: none;
+  }
+}
+.logo a {
+  background-image: linear-gradient(to left, #00ff95, #00aeff);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  height: 80%;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+  font-weight: bold;
+}
+/*# sourceMappingURL=basic.css.map */

@@ -1,0 +1,153 @@
+/* LANGUAGE */
+.language{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* margin: 0 200px; */
+  z-index: 200;
+}
+
+.language_container input{
+  display: none ;
+}
+.language_container label{
+  padding-bottom: 4px;
+  display: block;
+  position: relative;
+  z-index: 1000;
+}
+
+.lang-expand {
+  display: block;
+  content: '';
+  position: absolute;
+  width: 120%;
+  height: 40px;
+  top: -12px;
+  left: -12px;
+  border-radius: 25%;
+  /* background: rgba(255, 0, 0, 0.2); */
+  transform: translate(10%, 0);
+/* -webkit-transform: translate(-50%, -50%);
+-ms-transform: translate(-50%, -50%); */
+}
+
+.language_container .ja{
+  margin-top: -2px;
+}
+ 
+ /* === 各ラジオボタンのラベルをボタンに変更 == */
+ .language_container{
+   font-size: 0.8rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 6vw;
+color: white;
+}
+
+.nav_container{
+  display: grid;
+  grid-template-columns:1fr 2fr 1fr;
+  width: 100%;
+  max-width: 1920px;
+  height: 70px;
+  position: relative;
+  padding: 0 300;
+  align-items: center;
+  justify-items: center;
+}
+
+
+.nav_container .nav_text{
+  color: white;
+  font-size: 3vw;
+  font-weight: 900;
+}
+
+nav .input-container{
+position: relative;
+margin:auto auto;
+}
+
+#search-btn{
+  position: absolute;
+  right: 5%;
+  top: 20%;
+
+}
+
+.nav_container input {
+  height: 30px;
+  border-radius: 10px;
+  min-width: 199px;
+  width: 20vw;
+  background-color: rgba(255, 255, 255);
+  color: rgba(255, 255, 255, 0.6);
+  -webkit-appearance: none;
+  border:solid white 2px;
+  outline: none;
+}
+
+/* .nav_link{
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  color: white;
+} */
+
+.nav_logo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-right: 10vw;
+}
+
+
+.nav_logo a{
+  font-size: 1.6rem;  
+}
+
+.logo a{
+  background-image: linear-gradient(to left,  rgb(0, 255, 149), rgb(0, 174, 255) );
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -moz-text-fill-color: transparent;
+  height: 80%;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  z-index: 99;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 800px){
+/* 800px */
+.nav_container{
+  grid-template-columns: 1fr 1fr;
+}
+/* 800px */
+.nav_container .nav_text{
+  font-size: 2rem;
+}
+/* 800px */
+.nav_container .logo{
+  padding-right: 20vw;
+}
+}
+
+@media screen and (max-width: 480px){
+
+  /* 480px */
+  .nav_logo a{
+    font-size: 1rem;  
+  }
+
+  /* 480px */
+  .nav_container{
+    height: 40px;
+  }
+  /* 480px */
+  .nav_container .nav_text{
+    font-size: 1.2rem;
+  }
+  }
